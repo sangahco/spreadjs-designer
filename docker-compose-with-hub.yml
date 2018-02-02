@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+
+  manual:
+    image: ${REGISTRY_URL}/spreadjs-designer
+    # volumes:
+    # - ${DOC_SOURCE}:/usr/share/nginx/html:ro
+    networks:
+      default:
+      hub_net:
+        aliases: 
+        - ${HUB_INSTANCE}
+    logging: 
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    restart: "unless-stopped"
+
+networks: 
+  hub_net:
+    external: true

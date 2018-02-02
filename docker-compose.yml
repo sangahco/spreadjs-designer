@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+
+  manual:
+    image: ${REGISTRY_URL}/spreadjs-designer
+    # volumes:
+    # - ${DOC_SOURCE}:/usr/share/nginx/html:ro
+    logging: 
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    ports:
+    - ${HTTP_PORT}:80
