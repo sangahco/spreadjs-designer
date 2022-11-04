@@ -2,7 +2,7 @@ version: "3"
 
 services:
 
-  manual:
+  sjsdesigner:
     build: src
     # volumes:
     # - ${DOC_SOURCE}:/usr/share/nginx/html:ro

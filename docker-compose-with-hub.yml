@@ -2,7 +2,7 @@ version: "3"
 
 services:
 
-  manual:
+  sjsdesigner:
     image: ${REGISTRY_URL}/spreadjs-designer
     # volumes:
     # - ${DOC_SOURCE}:/usr/share/nginx/html:ro
